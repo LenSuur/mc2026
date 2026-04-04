@@ -56,9 +56,7 @@ enable_dispensers: true
 # (Blacklisted mobs included in the whitelist will still be allowed)
 # Default: [cow, pig, sheep]
 whitelisted_mobs:
-- cow
-- pig
-- sheep
+- not ?hostile
 
 # Mobs that are not allowed to be picked up.
 # Default: [?hostile, wither, ender_dragon]
