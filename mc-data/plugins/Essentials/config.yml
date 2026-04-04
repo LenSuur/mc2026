@@ -783,7 +783,7 @@ world-home-permissions: false
 # Remember, they must have BOTH permission nodes in order to be able to set multiple homes.
 # For more information, visit https://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
-  default: 3
+  default: 5
   vip: 5
   staff: 10
 
@@ -1232,7 +1232,7 @@ respawn-listener-priority: high
 spawn-join-listener-priority: high
 
 # When players die, should they respawn at their first home or bed instead of the spawnpoint?
-respawn-at-home: false
+respawn-at-home: true
 
 # When players die, should they respawn at their bed instead of their first home or the spawnpoint?
 # The 'respawn-at-home' setting above must also be true for this to take effect.
