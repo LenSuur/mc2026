@@ -1,0 +1,27 @@
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    container_name: mc-paper
+    restart: unless-stopped
+
+    environment:
+      EULA: "TRUE"          # Required — confirms Mojang EULA
+      TYPE: "PAPER"         # Run a Paper server (not vanilla)
+      VERSION: "LATEST"     # Always use latest Paper-supported MC
+      MEMORY: "6G"          # How much RAM the server can use
+      TZ: "Europe/Tallinn"  # Server timezone (for logs etc.)
+
+      # Auto-download Geyser + Floodgate → enables cross-play
+      PLUGINS: |
+        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
+        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+
+    ports:
+      - "25565:25565"        # Java Edition players connect here
+      - "19132:19132/udp"    # Bedrock players connect here (via Geyser)
+      - "8080:8080"          # Squaremap
+      - "8804:8804"          # Plan
+
+    volumes:
+      - ./mc-data:/data      # Worlds, configs, active plugins, backups
+      - ./plugins:/plugins   # Drop-in folder for new plugin .jars
