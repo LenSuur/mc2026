@@ -24,9 +24,9 @@ GriefPrevention:
     ProtectHorses: true
     ProtectDonkeys: true
     ProtectLlamas: true
-    InitialBlocks: 100
+    InitialBlocks: 300
     Claim Blocks Accrued Per Hour:
-      Default: 100
+      Default: 175
     Max Accrued Claim Blocks:
       Default: 80000
     Accrued Idle Threshold: 0
@@ -42,7 +42,7 @@ GriefPrevention:
     ModificationTool: GOLDEN_SHOVEL
     Expiration:
       ChestClaimDays: 7
-      UnusedClaimDays: 14
+      UnusedClaimDays: 90
       AllClaims:
         DaysInactive: 60
         ExceptWhenOwnerHasTotalClaimBlocks: 10000
@@ -93,7 +93,7 @@ GriefPrevention:
     AllowFlintAndSteelNearOtherPlayers:
       PvPWorlds: true
       NonPvPWorlds: false
-    ProtectPetsOutsideLandClaims: false
+    ProtectPetsOutsideLandClaims: true
   Economy:
     ClaimBlocksMaxBonus: 0
     ClaimBlocksPurchaseCost: 0.0
