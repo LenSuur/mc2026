@@ -1,0 +1,41 @@
+# DynamicLight Configuration
+
+# General settings
+settings:
+  update-interval: 5         # Ticks between light updates (1-20, lower = more updates but higher server load)
+  max-light-distance: 30     # Maximum distance to update light for players
+  enable-by-default: true    # Should dynamic light be enabled for new players by default?
+
+# Light levels for different items (0-15, 15 is the brightest)
+# Only add items that should emit light
+light-levels:
+  # Vanilla items
+  TORCH: 15
+  GLOWSTONE: 15
+  LANTERN: 15
+  SOUL_LANTERN: 15
+  SEA_LANTERN: 15
+  LAVA_BUCKET: 15
+  JACK_O_LANTERN: 15
+  SHROOMLIGHT: 15
+  GLOW_BERRIES: 8
+  GLOW_LICHEN: 8
+  GLOW_INK_SAC: 10
+  END_ROD: 15
+  BLAZE_ROD: 10
+  BLAZE_POWDER: 8
+  REDSTONE_TORCH: 7
+  REDSTONE: 7
+  MAGMA_BLOCK: 10
+  MAGMA_CREAM: 8
+  CAMPFIRE: 15
+  SOUL_CAMPFIRE: 12
+  SOUL_TORCH: 15
+
+# Messages
+messages:
+  prefix: "&7[&eDynamicLight&7] "
+  enabled: "&aYou have enabled dynamic lighting."
+  disabled: "&cYou have disabled dynamic lighting."
+  reload: "&aConfiguration reloaded."
+  no-permission: "&cYou don't have permission to use this command."
