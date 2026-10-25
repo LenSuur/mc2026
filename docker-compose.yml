@@ -18,7 +18,9 @@ services:
 
     ports:
       - "25565:25565"        # Java Edition players connect here
-      - "19132:19132/udp"    # Bedrock players connect here (via Geyser)
+      - "19132:19132/udp"    # Bedrock RakNet (legacy Bedrock clients, via Geyser)
+      - "19132:19132"        # Bedrock NetherNet signaling (TCP)
+      - "19133:19133/udp"    # Bedrock NetherNet gameplay (webrtc-port)
       - "8080:8080"          # Squaremap
       - "8804:8804"          # Plan
 
