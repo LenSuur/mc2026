@@ -7,7 +7,7 @@ services:
     environment:
       EULA: "TRUE"          # Required — confirms Mojang EULA
       TYPE: "PAPER"         # Run a Paper server (not vanilla)
-      VERSION: "26.2"     # Pinned Minecraft version
+      VERSION: "26.3"       # Pinned Minecraft version
       MEMORY: "6G"          # How much RAM the server can use
       TZ: "Europe/Tallinn"  # Server timezone (for logs etc.)
 
